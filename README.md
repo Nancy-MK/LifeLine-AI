@@ -22,24 +22,24 @@ No internet. No cloud. No failure point. Just get out safe.
 ---
 
 ## 🏗️ System Architecture
-[ Physical Building Model ]
-│
-[ ESP32 Firmware ]        ← sensors + fusion algorithm + WiFi SoftAP
-│  HTTP
-[ Node.js Server ]        ← A* pathfinding + Q-Learning + REST API
-│  HTTP
-[ Unity iOS App ]           ← 2D map + AR navigation arrows
-[ Admin Dashboard ]         ← live risk heatmap + occupant tracking
----
 
+```
+[ Physical Building Model ]
+         │
+    [ ESP32 Firmware ]        ← sensors + fusion algorithm + WiFi SoftAP
+         │  HTTP
+    [ Node.js Server ]        ← A* pathfinding + Q-Learning + REST API
+         │  HTTP
+  [ Unity iOS App ]           ← 2D map + AR navigation arrows
+  [ Admin Dashboard ]         ← live risk heatmap + occupant tracking
+```
 ## 📦 What's in This Repository
-LifeLine-AI/
-├── firmware/          ← ESP32 Arduino sketch (.ino)
-├── server/            ← Node.js Express server
-│   ├── server.js      ← A*, Q-Learning, REST endpoints
-│   ├── qtable.json    ← trained Q-table (auto-generated)
-│   └── package.json
-└── README.md
+
+- `firmware/` — ESP32 Arduino sketch (.ino)
+- `server/server.js` — A*, Q-Learning, all REST endpoints
+- `server/qtable.json` — trained Q-table (auto-generated on first run)
+- `server/package.json` — Node.js dependencies
+  
 > 🎮 The Unity project (4 GB) is hosted separately on Google Drive:
 > **[Download Unity Project](https://drive.google.com/file/d/1x9IwmpWfwi-GgqRgaILUa2VmPCz-plc_/view?usp=sharing)**
 
